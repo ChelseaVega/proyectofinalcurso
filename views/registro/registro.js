@@ -51,7 +51,16 @@ createUserForm.addEventListener("submit", async (event) => {
     alert("Por favor, complete todos los campos");
     //console.log(event);
     return;
-  } else {
+  } 
+  const password = createPasswordInput.value;
+
+  // Validar la contraseña
+  if (!validatePassword(password)) {
+    alert("La contraseña debe tener entre 8 y 12 caracteres, incluir al menos una mayúscula, un carácter especial y contener números.");
+    return;
+  }
+  
+  else {
     //console.log(createCedulaInput.value);
     try {
       const newUser = {
