@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+   <style>
+    .con{
+        display: flex;
+        justify-content: left;
+    }
+    .imagen{
+        width: 250px;
+      
+    }
+    .con {
+            display: flex;
+            justify-content: left;
+        }
+        .imagen {
+            width: 250px;
+        }
+
+        /* Estilos para pantallas pequeñas */
+        @media (max-width: 768px) { /* Puedes ajustar el valor según tus necesidades */
+            .row {
+                display: flex;
+                flex-direction: column; /* Cambia la dirección de las filas a columna */
+            }
+            .row .four.columns {
+                width: 100%; /* Asegura que las columnas ocupen todo el ancho */
+                margin-bottom: 20px; /* Agrega espacio entre las imágenes */
+            }
+            .info-card img {
+                width: 100%; /* Asegura que la imagen ocupe todo el ancho de la columna */
+                margin-bottom: 10px; /* Agrega espacio entre las imágenes */
+            }
+        }
+   </style>
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="four columns">
+                <img src="img/logo3.jpg" id="logo">
+                
+            </div>
+            <div style= "text-align: right !important;">
+                <!-- <a href="editar-producto.html"> <p style="color: white; text-align: right !important;">holaaaa</p><img width="40" src="img/componer (1).png"></a> -->
+                
+                
+           <a href="nuevo-producto.html"> <img width="40" src="img/agregar.jpeg" ></a>
+      
+        
+         <!-- <a href="eliminar-producto.html">   <img  width="40" src="img/basura (1) (1).png"></a>  -->
+            <div class="two columns u-pull-right">
+            </div>
+                
+            </div>
+        </div> 
+    </div>
+    </header>
+
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <div class="contenido-hero" style="text-align: center;">
+                        <h2 class="letra">Selecciona tus productos favoritos</h2>
+                        <!-- Tu contenido adicional aquí -->
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns icono icono1">
+                        <p>Mas de mil sabores a ofrecer <br>
+                        Explora todos nuestros productos</p>
+                    </div>
+                    <div class="four columns icono icono2">
+                        <p> No esperes mas!<br>
+                        Ven a disfrutar en familia!</p>
+                    </div>
+                    <div class="four columns icono icono3">
+                        <p>Siempre pensando en ti<br>
+                        Contactanos</p>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lista-cursos" class="container">
+        <h1 id="encabezado" class="encabezado letra"> NUESTROS PRODUCTOS</h1>
+        <div id="products-from-db">
+        </div>
+       
+     </div>       
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns">
+                            <nav id="principal" class="menu">
+                                <a class="enlace" href="#">Para tu Negocio</a>
+                                <a class="enlace" href="#">Conviertete en Instructor</a>
+                                <a class="enlace" href="#">Aplicaciones Móviles</a>
+                                <a class="enlace" href="#">Soporte</a>
+                                <a class="enlace" href="#">Temas</a>
+                            </nav>
+                    </div>
+                    <div class="four columns">
+                            <nav id="secundaria" class="menu">
+                                <a class="enlace" href="#">¿Quienes Somos?</a>
+                                <a class="enlace" href="#">Empleo</a>
+                                <a class="enlace" href="#">Blog</a>
+                            </nav>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.js" integrity="sha512-kFoMebJcPxdfDstjuwbbJN3q7hQ6O6npC9exDmbTR7HZZUC50s7DKl/MJSiukySAolVrcVmaLRHTmRjwnGCFow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

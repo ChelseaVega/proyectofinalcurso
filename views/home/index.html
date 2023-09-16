@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" src="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+    
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+  
+  .colorsec{
+    background-color: #9da1ed;
+  }
+
+.colorosa{
+background-color: #f6e8ed;
+}
+.resaltado {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+
+
+.fondo3{
+  background-color:  #ff2e97;
+  border-radius: 4%;
+  
+}
+      .fondorosa{
+
+        background-color: #f6e8ed;
+      }
+      .color{
+          color: white;
+      }
+      .centrar{
+          text-align: center !important;
+      }
+      .fondo1{
+        background-color: #f6e8ed;
+        display: flex;
+  justify-content: center;
+  align-items: center;
+      }
+  .borde{
+    border-radius: 4px;
+  }
+  .colorbarra{
+    background-color: #15364d;
+  }
+  .letra{
+    font-family: 'Lobster', cursive;
+font-family: 'Oswald', sans-serif;
+}
+.pricing-section {
+  display: flex;
+  justify-content: center;
+}
+
+.price-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.price-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.price-card li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.price {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.price h3 {
+  color: #ff9900;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #ff9900;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e59400;
+}
+.borde1{
+  border-radius: 50% 50%;
+}
+.fondonosotros{
+  background-image:url(img/nosotros.jpeg);
+  height: 1000px;
+  width: 1000px;
+  background-position:top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center !important;
+}
+.fondo2{
+  background-color: white ; 
+}
+@keyframes jump {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+  
+      .jumping-image {
+        width: 200px;
+        height: 200px;
+        animation: jump 1s infinite;
+      }
+      @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    
+        .animate-marquee {
+            animation: marquee 15s linear infinite;
+        }
+        .expand-on-hover {
+    transition: transform 0.2s ease-in-out;
+}
+
+.expand-on-hover:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+}
+@media (max-width: 768px) {
+            /* Pantallas pequeñas */
+            .pricing-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            /* Pantallas grandes */
+            .pricing-section {
+                display: flex; /* Mostrar pricing-section en pantallas grandes */
+            }
+        }
+      </style>
+</head>
+<body id="contenido" >
+   
+    <nav class="colorbarra ">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex flex-shrink-0 items-center">
+                <img class="h-10 w-auto borde" src="img/logo3.jpg" alt="Your Company">
+                
+              </div>
+            </div>
+          
+            <div>
+              <form class="centrar" >   
+                  <div class="flex items-center justify-end">
+                      <input type="text" id="resultados"  class="border rounded px-2 py-1">
+                      <button type="submit" id="busqueda" class="text-white ml-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-2 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                          BUSCAR
+                      </button>
+                  </div>   
+              </form>
+          </div>
+       
+     
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <!-- Profile dropdown -->
+              <div class="relative ml-3">
+                <div>
+                  <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <span class="sr-only">Open user menu</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 color">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </button>
+                
+                  <!-- Contenedor del menú -->
+                  <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" id="user-menu">
+                    <!-- Opciones del menú -->
+                    <a href="../iniciarsesion/index.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Iniciar sesión</a>
+                    <a href="../registro/index.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Registrarse</a>
+                    <a href="../reserva/index.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Rerservas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        
+      </nav>
+      
+      <div  class="fondo1">
+     
+        <div>
+          <br><br>
+          <img class="centrar" height="300" width="300" src="img/cerdito chelea [Recuperado] (1).png" style="max-width: 100%;">
+          <br><br>
+        </div>
+     <p class="colorosa" style="color:#f6e8ed ; ">   .........................</p>
+     
+        <div>
+          <img class="jumping-image h-80 w-80" style="border-radius: 4%;" src="img/Post de Instagram anuncio de servicios moderno colorido.png" alt=" Jumping Image 500">
+  
+         </div>
+        
+      </div>
+       
+
+
+      
+      <div class="row">
+          <div class="rounded-sm bg-gray-100 p-4 centrar letra">
+            <p class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl">NO  TE PUEDES PERDER DE NUESTROS INCREIBLES COMBOS</p>
+          </div>
+      
+      </div>
+
+
+ 
+      <section class="colorbarra">
+      <div class="container text-center">
+        <div class="row align-items-start">
+          <div class="col ">
+            <img src="img/nombre1.jpg" alt="">
+            
+          </div>
+          <div class="col">
+            <img src="img/nombre2.jpg" alt="">
+           
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="container text-center">
+    <br>
+        <div class="row align-items-start">
+          <div class="col ">
+            <img src="img/nombre3.jpg" alt="">
+           
+          </div>
+          <div class="col">
+            <img src="img/nombre4.jpg" alt="">
+        
+          </div>
+          
+        </div>
+      </div>
+      <br> <br> 
+      <div class="row">
+        <br> <br> <br>
+        <div  class="col-span-6 centrar" >
+          <a href="../iniciarsesion/index.html">
+        <button type="submit" class="text-white bg-blue-900 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-500 font-normal rounded-lg text-lg px-11 py-2 mx-10 dark:bg-blue-800 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <h4>PEDIR AHORA</h4>
+          </button>
+        </a>
+          <br> 
+    </div>
+
+     <section>
+      <div class="rounded-sm bg-gray-100 p-4 centrar letra">
+        <p class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl centrar">NUESTRO RESTAURANTE</p>
+        <p class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl centrar " id="p">VISITANOS</p>
+      </div>
+    
+   
+    <div class="flex flex-row overflow-hidden">
+      <div class="w-1/5 h-120 p-2 relative mt-4">
+          <img src="img/local.jpeg" class="borde h-full w-full object-cover transition transform hover:scale-110 animate-marquee">
+      </div>
+  
+      <div class="w-1/5 p-2 h-120 relative mt-4">
+          <img src="img/cliente1.JPG" class="borde h-full w-full object-cover transition transform hover:scale-110 animate-marquee">
+      </div>
+      <div class="w-1/5 p-2 h-120 relative mt-4">
+          <img src="img/cliente5.JPG" class="borde h-full w-full object-cover transition transform hover:scale-110 animate-marquee">
+      </div>
+      <div class="w-1/5 p-2 h-120 relative mt-4">
+          <img src="img/cliente8.JPG" class="borde h-full w-full object-cover transition transform hover:scale-110 animate-marquee">
+      </div>
+      <div class="w-1/5 p-2 h-120 relative mt-4">
+          <img src="img/cliente7.JPG" class="borde h-full w-full object-cover transition transform hover:scale-110 animate-marquee">
+      </div>
+  </div>
+  
+    
+  
+     </section>
+     <section>
+      <br> <br> <br> 
+      <div class="rounded-sm bg-gray-100 p-4 centrar letra">
+        <p class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl centrar">TIPOS DE CHICHARRON</p>
+     
+      </div>
+      <div class="pricing-section letra ">
+        <div class="price-card expand-on-hover">
+          <div class="price-details  ">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl">CHICHARRON PORK BELLY</h2>
+            <br>
+            <img class="borde1" src="img/chicharron bello.JPG" >
+            <br><br>
+            <p class="text-9xl  tracking-tight text-gray-900 sm:text-2xl">ESTE CHICHARRON ES LA PARTE DE LA COSTILLA DE CERDO:</p>
+            
+              <p class="text-3xl  tracking-tight text-gray-900 sm:text-2xl">EXTRA CARNE</p>
+          
+              <p class="text-9xl   tracking-tight text-gray-900 sm:text-2xl">EXTRA CRUJIENTE</p>
+              <p class="text-9xl  tracking-tight text-gray-900 sm:text-2xl">ALTO EN PROTEINAS</p>
+              <p class="text-9xl  tracking-tight text-gray-900 sm:text-2xl">SABOR EXQUISITO</p>
+              <p class="text-9xl tracking-tight text-gray-900 sm:text-2xl">LIBRE DE QUIMICOS</p>
+            
+          </div>
+          <div  class="col-span-6 centrar" >
+           <a href="../iniciarsesion/index.html">
+            <button type="submit" class="text-white bg-blue-900 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-500 font-normal rounded-lg text-lg px-11 py-2 mx-10 dark:bg-blue-800 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              <h4>  PEDIR AHORA</h4>
+              </button>
+            </a>
+              <br> 
+        </div>
+        </div>
+        <div class="price-card expand-on-hover">
+          <div class="price-details">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl">CHICHARRON GALLETA</h2>
+            <img class="borde1" src="img/galleta.JPG" alt="">
+            <br><br>
+            <p class="text-9xl  tracking-tight text-gray-900 sm:text-2xl">ESTE CHICHARRON ES DE CUALQUIER PARTE DEL CERDO SOLO</p>
+            
+              <p class="text-9xl tracking-tight text-gray-900 sm:text-2xl">CRUJIENTE </p>
+              <p class="text-9xl tracking-tight text-gray-900 sm:text-2xl">TOSTADO</p>
+              <p class="text-9xl tracking-tight text-gray-900 sm:text-2xl">SABOR A GALLETA DE CHICHARRON</p>
+              <p class="text-9xl  tracking-tight text-gray-900 sm:text-2xl">SALADO</p>
+              <p class="text-9xl  tracking-tight text-gray-900 sm:text-2xl">LIBRE DE QUIMICOS</p>
+            
+          </div>
+          <div  class="col-span-6 centrar" >
+            <a href="../iniciarsesion/index.html">
+            <button type="submit" class="text-white bg-blue-900 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-500 font-normal rounded-lg text-lg px-11 py-2 mx-10 dark:bg-blue-800 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              <h4>  PEDIR AHORA</h4>
+              </button>
+              </a>
+              <br> 
+        </div>
+        </div>
+        <div class="price-card expand-on-hover">
+          <div class="price-details">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl">CHICHARRON CON CARNE</h2>
+            
+            <img class="borde1" src="img/con carne.JPG" alt="">
+            
+            <br><br>
+            <div class="rounded-sm bg-gray-100 p-4 centrar letra">
+              <p class="text-3xl  tracking-tight text-gray-900 sm:text-2xl centrar">ESTE CHICHARRON ES DEL PERNIL Y PALETA DEL COCHINO</p>
+           </div>
+              <p class="text-9xl  tracking-tight text-gray-900 sm:text-2xl">COMBINACION ENTRE GALLETA Y CARNE</p>
+              <p class="text-9xl  tracking-tight text-gray-900 sm:text-2xl">BAJO EN PROTEINAS</p>
+              <p class="text-9xl  tracking-tight text-gray-900 sm:text-2xl">ALTO EN SABOR EXQUISITO</p>
+              <p class="text-9xl  tracking-tight text-gray-900 sm:text-2xl">ESPECIAL PARA ACOMPAÑAR CON TOSTONES </p>
+              <p class="text-9xl  tracking-tight text-gray-900 sm:text-2xl">LIBRE DE QUIMICOS</p>
+            
+          </div>
+          <div  class="col-span-6 centrar" >
+            <a href="../iniciarsesion/index.html"></a>
+            <button type="submit" class="text-white bg-blue-900 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-500 font-normal rounded-lg text-lg px-11 py-2 mx-10 dark:bg-blue-800 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              <h4>  PEDIR AHORA</h4>
+              </button>
+            </a>
+              <br> 
+        </div>
+        </div>
+      </div>
+
+
+    </section>
+    <style>
+      .colorfodo{
+        background-color: #f3f3f3;
+      }
+    </style>
+    <div class="colorfodo py-24 sm:py-32 " >
+      <div class="mx-auto max-w-7xl px-6 lg:px-8  " style="border-radius: 4%;" >
+        <div class="rounded-sm colorbarra p-4 centrar letra" >
+          <p class="text-3xl font-bold tracking-tight text-white sm:text-2xl centrar">OPINIONES DE NUESTROS CLIENTES</p>
+       
+        </div>
+        <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <div class="flex items-center gap-x-4 text-xs">
+              <time datetime="2020-03-16" class="text-gray-950">May 16, 2023</time>
+              <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
+            </div>
+            <div class="group relative">
+          
+              <p class=" text-gray-950">Pues en realidad es un lugar para comer cochino en Vista hermosa que es una zona donde te vas</p><p class=" text-gray-950">a encontrar con este tipo de establecimiento muy limpio bastante amables a buen precio y estuvo rico si es lo que te gustaría comer.
+              <p class=" text-gray-950">
+                Estacionamiento: Pero pues no es tan grande si caben pocos carros,pero cuenta con valet parking muy seguro.
+                Comida: 5/5  |  Servicio: 5/5  |  Ambiente: 5/5.</p>
+           </p> </div>
+            <div class="relative mt-8 flex items-center gap-x-4">
+              <img src="img/clienta1.jpg" alt="" class="h-10 w-10 rounded-full bg-gray-50">
+              <div class="text-sm leading-6">
+                <p class="font-semibold text-gray-900">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    ana iris luna
+                  </a>
+                </p>
+                <p class="text-gray-950">Cliente</p>
+              </div>
+            </div>
+          </article>
+    
+          <!-- More posts... -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <div class="flex items-center gap-x-4 text-xs">
+              <time datetime="2020-03-16" class="text-gray-950">Jun 21, 2023</time>
+              <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
+            </div>
+            <div class="group relative">
+          
+              <p class=" text-gray-950">Excelente atención, la comida muy buena 5⭐
+                Comida: 5/5  |  Servicio: 5/5
+                
+                Platos recomendados
+                Cochino Frito Con Chorizo Y Morcilla
+                </p><p  class=" text-gray-950">
+                Espacios para estacionar
+                Hay suficiente espacio
+                
+                Opciones de estacionamiento
+                Estacionamiento gratuito.</p>
+            </div>
+            <div class="relative mt-8 flex items-center gap-x-4">
+              <img src="img/clienta2.jpg" alt="" class="h-10 w-10 rounded-full bg-gray-50">
+              <div class="text-sm leading-6">
+                <p class="font-semibold text-gray-950">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    doris valentina
+                  </a>
+                </p>
+                <p class="text-gray-950">Cliente</p>
+              </div>
+            </div>
+          </article>
+           <!-- More posts... -->
+           <article class="flex max-w-xl flex-col items-start justify-between">
+            <div class="flex items-center gap-x-4 text-xs">
+              <time datetime="2020-03-16" class="text-gray-950">Jul 05, 2023</time>
+              <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
+            </div>
+            <div class="group relative">
+           
+              <p class=" text-gray-950">Excelente para comer y pasas un rato agradable, ambiente familiar atentido por sus dueños esposos e hijos.
+                Comida: 5/5  |  Servicio: 5/5  |  Ambiente: 5/5</p>
+            </div>
+            <div class="relative mt-8 flex items-center gap-x-4">
+              <img src="img/cliente 3.jpg" alt="" class="h-10 w-10 rounded-full bg-gray-50">
+              <div class="text-sm leading-6">
+                <p class="font-semibold text-gray-950">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    Wilman Castro Fuenmayor
+                  </a>
+                </p>
+                <p class="text-gray-950">Cliente</p>
+              </div>
+            </div>
+          </article>
+         <br><br><br><br><br>
+        </div>
+      </div>
+      <section>
+        <div class="row colorbarra">
+            <div class="col-md-6">
+                <img src="img/nosotros.jpeg" alt="">
+            </div>
+            <div class="col-md-6 flex justify-center items-center">
+              <div class="text-center">
+                <div class="p-4 rounded-md">
+                  <p class="text-center text-xl font-semibold bg-pink-500 px-2 py-1 inline-block text-white rounded-md">
+                    CONOCE NUESTRA HISTORIA
+                </p>
+                
+                  <a href="conocenos/nosotros.html" class="block mt-2 text-center bg-slate-200 rounded-lg p-2">
+                      <h4 type="submit" class="text-black font-normal rounded-lg text-lg px-4 py-2 dark:bg-blue-800 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Conócenos Más</h4>
+                  </a>
+              </div>
+              
+              
+              </div>
+          </div>
+          
+          
+        </div>
+    </section>
+    
+      <!--<section>
+        <div class="row colorbarra">
+          <div class="col  ">
+            <img src="img/nosotros.jpeg" alt="">
+            
+              <a href="conocenos/nosotros.html" class="inline-block">
+                  <h4 type="submit" class="text-white bg-blue-900 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-500 font-normal rounded-lg text-lg px-4 py-2 dark:bg-blue-800 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Conócenos Más</h4>
+              </a>
+          </div>
+                     </div>
+            </section>-->
+
+       
+        <div class="rounded-sm bg-gray-100 p-4 centrar letra">
+          <p href="VISITANOS" id="VISITANOS" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl centrar">VISITANOS</p>
+          <p class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl centrar">EN NUESTRAS REDES SOCIALES</p>
+       </div>
+ 
+<section class=" w-full h-24" style="background-color:#15364d;">
+  <br>
+  <div class="flex justify-center items-center "style="background-color:#15364d;">
+      <a href="https://instagram.com/chicharronera_el_cerdon_de_pao?igshid=MzRlODBiNWFlZA==">  
+          <img src="img/instagram.png" width="60" alt="" class="mr-5">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61550550081123">  
+          <img src="img/facebook.png" width="60" alt="" class="mr-5">
+      </a>
+      <a href="https://twitter.com/elcerdonde1511">  
+          <img src="img/twitter.png" width="60" alt="">
+      </a>
+  </div>
+</section>
+<section class="bg-gray-100 py-8">
+  <div class="container mx-auto px-4 md:px-8 lg:px-16 flex flex-col md:flex-row justify-center items-center">
+      <div class="md:w-1/2 mb-4 md:mb-0 pr-4 ">
+          <div class="colorsec rounded-lg p-6 shadow-md">
+            <div class="flex justify-center items-center">
+              <p class="text-center text-xl font-semibold colorbarra px-2 py-1 inline-block text-white">
+                  UBICACIÓN: El Cerdón de Pao
+              </p>
+          </div>
+          
+          
+              <p class="mt-2 text-gray-700">¡Ven y disfruta de nuestros deliciosos chicharrones! Estamos ubicados en Caracas, Miranda. ¡Te esperamos!</p>
+          </div>
+      </div>
+      <div class="md:w-1/2 pl-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d62769.23387147881!2d-66.88588099331382!3d10.494587044393842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x8c2a58adcd824807%3A0x93dd2eae0a998483!2sCaracas%2C%20Distrito%20Capital!3m2!1d10.4805937!2d-66.90360629999999!4m5!1s0x8c2a57481362a4f1%3A0x6e92d430c02df142!2sChicharronera%20el%20cerdon%20de%20pao%2C%20Caracas%2C%20Miranda!3m2!1d10.486798499999999!2d-66.78880819999999!5e0!3m2!1ses!2sve!4v1692935846392!5m2!1ses!2sve" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+</section>
+
+
+  
+      <script src="js/inicio.js"></script>
+</body>
+</html>

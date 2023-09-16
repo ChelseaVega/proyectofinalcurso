@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+   <style>
+    .con{
+        display: flex;
+        justify-content: left;
+    }
+    .imagen{
+        width: 250px;
+      
+    }
+    .ancho{
+        width: 400;
+    }
+    .centrar{
+        text-align: center !important;
+    }
+    .colorbarra{
+        background-color: #15364d;
+    }
+    .con {
+            display: flex;
+            justify-content: left;
+        }
+        .imagen {
+            width: 200px;
+        }
+        /* Estilos para pantallas pequeñas */
+        @media (max-width: 768px) { /* Puedes ajustar el valor según tus necesidades */
+            .row {
+                display: flex;
+                flex-direction: column; /* Cambia la dirección de las filas a columna */
+            }
+            .row .four.columns {
+                width: 100%; /* Asegura que las columnas ocupen todo el ancho */
+                margin-bottom: 20px; /* Agrega espacio entre las imágenes */
+            }
+            .info-card img {
+                width: 100%; /* Asegura que la imagen ocupe todo el ancho de la columna */
+                margin-bottom: 10px; /* Agrega espacio entre las imágenes */
+            }
+        }
+   </style>
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="four columns">
+                <img src="img/logo3.jpg" id="logo">
+            </div>
+            <div class="two columns u-pull-right">
+                <ul>
+                    <li class="submenu">
+                            <img src="img/cart.png" id="img-carrito">
+                            <div id="carrito">
+                                    
+                                    <table id="lista-carrito" class="u-full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                    <a id="finalizarCompra" value="finalizarCompra"    href="../delivery/index.html">
+                                    <button id="finalizarCompra" value="finalizarCompra">Finalizar Compra</button>
+                                    </a>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    </header>
+
+
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <div class="contenido-hero" style="text-align: center;">
+                        <h2 class="letra">Selecciona tus productos favoritos</h2>
+                        <!-- Tu contenido adicional aquí -->
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns icono icono1">
+                        <p>Mas de mil sabores a ofrecer <br>
+                        Explora todos nuestros productos</p>
+                    </div>
+                    <div class="four columns icono icono2">
+                        <p> No esperes mas!<br>
+                        Ven a disfrutar en familia!</p>
+                    </div>
+                    <div class="four columns icono icono3">
+                        <p>Siempre pensando en ti<br>
+                        Contactanos</p>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lista-cursos" class="container">
+        <h1 id="encabezado" class="encabezado letra"> NUESTROS PRODUCTOS</h1>
+        <div class="row">
+            <div class="four columns">
+                <div class="card">                    
+                    <div class="info-card">
+                        <img src="img/cocacolapeq.jpeg" class="imagen-curso u-full-width">
+                        <h4 nombre="Coca cola pequeña de 350ml">Coca cola pequeña de 350ml</h4>
+                        
+                        <img src="img/estrellas.png">
+                        <p class="precio">  <span class="u-pull-right ">$1</span></p>
+                        <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;"  data-id="1">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                                                
+                        <div class="info-card">
+                        
+                            <img width=" "height="280" src="img/morahit.jpeg" class="imagen-curso u-full-width">
+                            
+                            <h4 nombre="Refreso Hit Mora">Refreso Hit Mora</h4>
+                          
+                            <img src="img/estrellas.png">
+                            <p class="precio"> <span class="u-pull-right ">$1</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" data-id="2" style="background-color:  #15364d; color: white;">Agregar Al Carrito</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="four columns">
+                    <div class="card">                        
+                        <div class="info-card">
+                            <img height="280" src="img/naranja.jpeg" class="imagen-curso u-full-width">
+                            <h4>Refresco Hit Naranja 350ml</h4>
+                         
+                            <img src="img/estrellas.png">
+                            <p class="precio"> <span class="u-pull-right ">$1</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="3">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">                    
+                    <div class="info-card">
+                        <img height="312" src="img/malta.jpeg" class="imagen-curso u-full-width">
+                        <h4>Malta Polar </h4>
+                       <img src="img/estrellas.png">
+                       <p class="precio"><span class="u-pull-right ">$1</span></p>
+                        <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="4">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">                        
+                        <div class="info-card">
+                            <img src="img/chinotto.jpeg" class="imagen-curso u-full-width">
+                            <h4> Refresco Chinotto 1l</h4>
+                       
+                            <img src="img/estrellas.png">
+                            <p class="precio"> <span class="u-pull-right ">$2</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="5">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">                        
+                        <div class="info-card">
+                            <img src="img/cocacolagrande.jpeg" class="imagen-curso u-full-width">
+                            <h4>Coca cola 1l</h4>
+                        
+                            <img src="img/estrellas.png">
+                            <p class="precio"><span class="u-pull-right ">$2</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="6">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">                    
+                    <div class="info-card">
+                        <img src="img/yukery.jpeg" class="imagen-curso u-full-width">
+                        <h4>Jugo Jukery</h4>
+                      
+                        <img src="img/estrellas.png">
+                        <p class="precio"> <span class="u-pull-right ">$2</span></p>
+                        <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="7">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">                        
+                        <div class="info-card">
+                            <img height="310" src="img/gatorade.jpeg" class="imagen-curso u-full-width">
+                            <h4>Gatorade</h4>
+                       
+                            <img src="img/estrellas.png">
+                            <p class="precio"> <span class="u-pull-right ">$3</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="8">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">                        
+                        <div class="info-card">
+                            <img height="308" src="img/chorizo.jpeg" class="imagen-curso u-full-width">
+                            <h4>Chorizo ahumado</h4>
+                        
+                            <img src="img/estrellas.png">
+                            <p class="precio"><span class="u-pull-right ">$8 (kg)</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="9">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+                <div class="four columns">
+                    <div class="card">                        
+                        <div class="info-card">
+                            <img src="img/morcilla.jpeg"dl class="imagen-curso u-full-width">
+                            <h4>Morcilla</h4>
+                            
+                            <img src="img/estrellas.png">
+                            <p class="precio"><span class="u-pull-right ">$8 (kg)</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="10">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            
+                            <div class="info-card">
+                                <img height="250" src="img/parillita.jpeg" class="imagen-curso u-full-width">
+                                <h4>Parilla con todo</h4>
+                               
+                                <img src="img/estrellas.png">
+                                <p class="precio"> <span class="u-pull-right ">$14 (kg)</span></p>
+                                <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="11">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">                            
+                            <div class="info-card">
+                                <img height="250" src="img/parrilita2.jpeg" class="imagen-curso u-full-width">
+                                <h4>Parrilla pequeña</h4>
+                              
+                                <img src="img/estrellas.png">
+                                <p class="precio"><span class="u-pull-right ">$7 (1/2 kg)</span></p>
+                                <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="12">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+               <br>
+                <div class="row">
+                    <div class="four columns">
+                        <br>
+                        <div class="card">                        
+                            <div class="info-card">
+                                <img src="img/bollito.jpg"dl class="imagen-curso u-full-width">
+                                <h4>bollito de chicharron</h4>
+                            
+                                <img src="img/estrellas.png">
+                                <p class="precio"><span class="u-pull-right ">$2 c/u</span></p>
+                                <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="13">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                    </div>
+                    <div class="four columns">
+                        <br>
+                            <div class="card">
+                                
+                                <div class="info-card">
+                                    <img height="275" src="img/ajo.jpeg" class="imagen-curso u-full-width">
+                                    <h4>chorizo de ajo</h4>
+                                
+                                    <img src="img/estrellas.png">
+                                    <p class="precio"><span class="u-pull-right ">$8 (kg)</span></p>
+                                    <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="14">Agregar Al Carrito</a>
+                                </div>
+                            </div> <!--.card-->
+                    </div>
+                    <div class="four columns">
+                        <br>
+                            <div class="card">                            
+                                <div class="info-card">
+                                    <img height="275" src="img/picante.jpeg" class="imagen-curso u-full-width">
+                                    <h4>Chorizo picante</h4>
+                                  
+                                    <img src="img/estrellas.png">
+                                    <p class="precio"> <span class="u-pull-right ">$8 (kg)</span></p>
+                                    <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="15">Agregar Al Carrito</a>
+                                </div>
+                            </div> <!--.card-->
+                    </div>
+                   
+            </div> <!--.row-->
+            <div class="row">
+                <div class="four columns">
+                    <br>
+                    <div class="card">                        
+                        <div class="info-card">
+                            <img height="275" src="img/chicharron bello.JPG"dl class="imagen-curso u-full-width">
+                            <h4>Chicharron pork belly</h4>
+                        
+                            <img src="img/estrellas.png">
+                            <p class="precio"><span class="u-pull-right ">$20 (kg)</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="16">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                    <br>
+                        <div class="card">
+                            
+                            <div class="info-card">
+                                <img height="275" src="img/con carne.JPG" class="imagen-curso u-full-width">
+                                <h4>Chicharron con carne</h4>
+                            
+                                <img src="img/estrellas.png">
+                                <p class="precio"><span class="u-pull-right ">$18 (kg)</span></p>
+                                <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="17">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                    <br>
+                        <div class="card">                            
+                            <div class="info-card">
+                                <img height="275" src="img/galleta.JPG" class="imagen-curso u-full-width">
+                                <h4>Chicharro galleta</h4>
+                              
+                                <img src="img/estrellas.png">
+                                <p class="precio"> <span class="u-pull-right ">$12 (kg)</span></p>
+                                <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="18">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+               
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <br>
+                <div class="card">                        
+                    <div class="info-card">
+                        <img height="275" src="img/cerveza.jpeg"dl class="imagen-curso u-full-width">
+                        <h4>Cerveza pequeña</h4>
+                    
+                        <img src="img/estrellas.png">
+                        <p class="precio"><span class="u-pull-right ">$0.75 c/u</span></p>
+                        <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="19">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                <br>
+                    <div class="card">
+                        
+                        <div class="info-card">
+                            <img height="275" src="img/agua.jpeg" class="imagen-curso u-full-width">
+                            <h4>Agua mineral</h4>
+                        
+                            <img src="img/estrellas.png">
+                            <p class="precio"><span class="u-pull-right ">$1 c/u</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="20">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                <br>
+                    <div class="card">
+                        
+                        <div class="info-card">
+                            <img height="275" src="img/tercio.JPG" class="imagen-curso u-full-width">
+                            <h4>Cerveza tercio</h4>
+                        
+                            <img src="img/estrellas.png">
+                            <p class="precio"><span class="u-pull-right ">$1 c/u</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="21">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+           
+    </div> <!--.row-->
+            <h1 id="encabezado" class="encabezado letra"> COMBOS ESPECIALES</h1>
+      
+            <style>
+                .centrar {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+                .row {
+                    margin-bottom: 5%; /* Espacio entre cada recuadro */
+                }
+            </style>
+            
+            <div class="row centrar">
+                <div class="seven columns" style="text-align: center;">
+                    <div class="card">                            
+                        <div class="info-card">
+                            <img height="275" src="img/combo1.jpg" class="imagen-curso u-full-width">
+                            <h4>Combo individual</h4>
+                            <img src="img/estrellas.png">
+                            <p class="precio"> <span class="u-pull-right ">$11</span></p>
+                            <a href="#" class="u-full-width button- button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="22">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+            </div>
+            
+            <div class="row centrar">
+                <div class="seven columns" style="text-align: center;">
+                    <div class="card">                            
+                        <div class="info-card">
+                            <img height="275" src="img/combo2.jpeg" class="imagen-curso u-full-width">
+                            <h4>Combo romantico</h4>
+                            <img src="img/estrellas.png">
+                            <p class="precio"> <span class="u-pull-right ">$18</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="23">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+            </div>
+            
+            <div class="row centrar">
+                <div class="seven columns" style="text-align: center;">
+                    <div class="card">                            
+                        <div class="info-card">
+                            <img height="275" src="img/combo3.jpeg" class="imagen-curso u-full-width">
+                            <h4>Combo familiar</h4>
+                            <img src="img/estrellas.png">
+                            <p class="precio"> <span class="u-pull-right ">$36</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="24">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+            </div>
+            
+            <div class="row centrar">
+                <div class="seven columns" style="text-align: center;">
+                    <div class="card">                            
+                        <div class="info-card">
+                            <img height="275" src="img/combo4.jpeg" class="imagen-curso u-full-width">
+                            <h4>Combo el trilliso</h4>
+                            <img src="img/estrellas.png">
+                            <p class="precio"> <span class="u-pull-right ">$25</span></p>
+                            <a href="#" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="25">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+            </div>
+
+             
+            <div class="row centrar">
+                <div class="seven columns" style="text-align: center;">
+                    <div class="card">                            
+                        <div class="info-card">
+                           
+                            <a href="../reserva/index.html" class="u-full-width button button input agregar-carrito" style="background-color:  #15364d; color: white;" data-id="25">RESERVAS</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+            </div>
+            
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns">
+                            <nav id="principal" class="menu">
+                                <a class="enlace" href="#">Para tu Negocio</a>
+                                <a class="enlace" href="#">Conviertete en Instructor</a>
+                                <a class="enlace" href="#">Aplicaciones Móviles</a>
+                                <a class="enlace" href="#">Soporte</a>
+                                <a class="enlace" href="#">Temas</a>
+                            </nav>
+                    </div>
+                    <div class="four columns">
+                            <nav id="secundaria" class="menu">
+                                <a class="enlace" href="#">¿Quienes Somos?</a>
+                                <a class="enlace" href="#">Empleo</a>
+                                <a class="enlace" href="#">Blog</a>
+                            </nav>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+
+  
+    <script src="js/cart.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+.image-container {
+    display: inline-block; /* Hacer que los contenedores de imagen se muestren en línea */
+    width: 50%; /* Ajustar el ancho de los contenedores de imagen */
+    margin: 10px 20px; /* Ajustar el espacio entre las imágenes */
+  }
+  
+  .image-container img {
+    width: 300%; /* Ajustar el ancho de las imágenes */
+    height: auto; /* Ajustar la altura de las imágenes */
+  }
+
+ /* Estilos generales para .price-card expand-on-hover */
+.price-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  /* Otros estilos generales... */
+}
+
+/* Consulta de medios para pantallas pequeñas como celulares */
+@media (max-width: 768px) {
+  .price-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px; /* Ajuste el valor de padding según tus necesidades */
+  }
+
+  .price-details {
+    text-align: center; /* Centrar el contenido en pantallas pequeñas */
+  }
+
+  .borde1 {
+    max-width: 100%; /* Ajustar el ancho de la imagen al ancho del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+  }
+
+  .col-span-6.centrar {
+    text-align: center; /* Centrar el botón en pantallas pequeñas */
+    margin-top: 10px; /* Ajuste el margen superior según tus necesidades */
+  }
+}

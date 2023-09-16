@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrador de Pacientes</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* ... (resto de los estilos) ... */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilos para los campos de entrada */
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px; /* Añadir border radius */
+            margin-bottom: 15px;
+        }
+
+        html {
+  min-height: 100%;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+}
+.container {
+    background-color: white;
+}
+header {
+  margin-top: 3rem;
+}
+header h1 {
+  color: white;
+}
+.lista-citas .cita {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  
+}
+.lista-citas .cita:last-of-type {
+  border-bottom: 0;
+}
+
+.lista-citas .cita p {
+  margin:0;
+}
+.lista-citas .cita button {
+  margin-top: 1rem!important;
+}
+.lista-citas .cita span {
+  font-weight: bold;
+}
+textarea {
+    height: 200px!important;
+}
+
+svg {
+  width: 21px;
+
+}
+html {
+            min-height: 100%;
+        }
+
+        /* Añadido para centrar el formulario */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+   /* Estilos para el botón */
+   .btn-custom {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px; /* Añadir border radius */
+         background-color: #15364d;  /* Azul oscuro */
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #15364d; /* Cambiar el color al pasar el ratón */
+        }
+        body {
+            background-color: #f6e8ed;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <h2 style="text-align: center;" class="block text-sm font-medium leading-6 text-gray-900">RESERVACION</h2>
+    <div class="container mt-5 p-5">
+        <div id="contenido" class="row">
+            <div class="col-md-6">
+                <h2 id="administra" class="mb-4">ADMINISTRA TU RESERVA</h2>
+                <ul id="citas" class="list-group lista-citas"></ul>
+            </div>
+            <div class="col-md-6 agregar-cita">
+                <form id="nueva-cita" method="POST">
+                    <legend class="mb-4">DATOS DEL CLIENTE</legend>
+                     
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">NOMBRE:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <br>
+                            <input type="text" id="nombre" name="nombre" class="form-control"  placeholder="NOMBRE">
+                        </div>
+                    </div>
+                    <div class="form-group row">APELLIDO:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <br>
+                            <input type="text" id="apellido" name="apellido" class="form-control"  placeholder="APELLIDO">
+                        </div>
+                    </div>
+                    <div class="form-group row">E-MAIL:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <br>
+                            <input type="text" id="email" name="email" class="form-control"  placeholder="E-MAIL">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="form-group row">CEDULA:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <br>
+                            <input type="text" id="cedula" name="cedula" class="form-control"  placeholder="CEDULA">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">ZONA DONDE VIVE</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <br>
+                            <input type="text" id="zonaVive" name="zonaVive" class="form-control"  placeholder="ZONA DONDE VIVE">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">MESA A RESERVAR</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <br>
+                            <input type="number" id="mesaReservar" name="mesaReservar" class="form-control"  placeholder="MESA A RESERVAR">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">HORA:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <br>
+                            <input type="time" id="hora" name="hora" class="form-control" style="border-radius: 4%;"  placeholder=">HORA">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <br>
+                        <label class="col-sm-4 col-lg-4 col-form-label">FECHA:</label>
+                        <br>
+                            <input type="date" id="fechaRetorno" name="fechaRetorno" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-custom">RESERVAR</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.js" integrity="sha512-kFoMebJcPxdfDstjuwbbJN3q7hQ6O6npC9exDmbTR7HZZUC50s7DKl/MJSiukySAolVrcVmaLRHTmRjwnGCFow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script>
+      // example email
+      (function () {
+        emailjs.init("-HG_uDvKY8VPbYrLx");
+      })();
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

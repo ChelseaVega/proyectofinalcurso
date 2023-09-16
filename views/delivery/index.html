@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Delivery Restaurant</title>
+</head>
+
+<style>
+  .colorbarra{
+    background-color: #15364d;
+
+  }
+  .colornav{
+    background-color: #e0c7d0;
+  }
+  .colorfondo{
+    background-color: #f07983;
+  }
+  .producto {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    border-radius: 4%;
+  }
+
+  .producto img {
+    height: 200px;
+    width: 200px;
+    border-radius: 4%;
+  }
+  .colorosa{
+    background-color: #f6e8ed;
+  }
+</style>
+<nav class="bg-blue-900 py-4 colorbarra">
+  <div class="max-w-7xl mx-auto px-4 bg-blue-950">
+    <div class="flex justify-between items-center bg-blue-950">
+      <div class="text-white text-lg font-semibold">Página Delivery</div>
+    </div>
+  </div>
+</nav>
+<body class="bg-gray-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-8">
+        <p class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl text-center">Somos lo mejor en tu mesa</p>
+        <div class="flex justify-center items-center">
+          <img class="h-20" src="img/chicharron.png" alt="Chicharrón">
+        </div>
+        
+        <div class="colornav">
+          <div class="mx-6 max-w-7xl px-4 sm:px-6 lg:px-8 ">
+            <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+              <h2 class="text-2xl font-bold text-gray-900">Lleva tu comida favorita hasta la puerta de tu casa</h2>
+        
+              <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+                <div class="group relative">
+                  <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                    <img src="img/clientecomiendo.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                    Desde la casa del Cerdon de Pao hasta tu casa !
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">Con lo mas exquisitos sabores</p>
+                </div>
+                <div class="group relative">
+                  <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                    <img src="img/clienteconinfante.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      Pide ahora y no te demores mas!
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900"> Compra mas cochino ahorra mas kilos</p>
+                </div>
+                <div class="group relative">
+                  <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                    <img src="img/dos-mujeres-asiaticas-felices-sosteniendo-caja-dulces-chocolate-celebrando-dia-internacional-mujer-sonriendo-alegremente-pie-sobre-pared-blanca.jpg" alt="Collection of four insulated travel bottles on wooden shelf." class="h-full w-full object-cover object-center">
+                  </div>
+                  <h3 class="mt-6 text-sm text-gray-500">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      No olvides compartir con los tuyos!
+                    </a>
+                  </h3>
+                  <p class="text-base font-semibold text-gray-900">La sana tradicion de compartir en familia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="productos-carrito" class="mt-6 producto colorosa">
+
+      </div>
+
+
+
+        <section>
+        
+        <p class="colorfondo mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl text-center">Completa el siguiente formulario para finalizar tu compra</p>
+        <br>
+    <p class="text-center">Es importante que rellenes el formulario para hacerte la entrega de tu compra del Cerdon de Pao.</p>
+    <div class="container ">
+      <form id="user-pedido" class="mt-8 rounded-lg shadow-md bg-white p-6">
+        <div class="border-b border-white pb-4">
+          <h2 class="text-base font-semibold leading-7 text-gray-900 text-center">Informacion Personal</h2>
+          </div>
+
+       
+       
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="rounded-md border border-gray-300 p-2">
+            <label for="nombre-apellido" class="block text-sm font-medium leading-6 text-gray-900">Nombre y Apellido</label>
+            <input type="text" id="nombre-apellido" class="input-field" required>
+          </div>
+    
+          <div class="rounded-md border border-gray-300 p-2">
+            <label for="cedula" class="block text-sm font-medium leading-6 text-gray-900">Cedula de Identidad</label>
+            <input type="text" id="cedula" class="input-field" required>
+          </div>
+    
+          <div class="rounded-md border border-gray-300 p-2">
+            <label for="telefono" class="block text-sm font-medium leading-6 text-gray-900">Correo Electronico</label>
+            <input type="text" id="telefono" class="input-field" required>
+          </div>
+    
+          <div class="rounded-md border border-gray-300 p-2">
+            <label for="localidad" class="block text-sm font-medium leading-6 text-gray-900">Localidad</label>
+            <div class="relative">
+              <select id="localidad" name="localidad" autocomplete="country-name" class="input-field">
+                <option value="" disabled selected>Seleccione una opción</option>
+               
+                <option value="Palo Verde">Palo Verde</option>
+                <option value="Petare">Petare</option>
+                <option value="California">California</option>
+                <option value="Los Cortijos">Los Cortijos</option>
+                <option value="Los Dos Caminos">Los Dos Caminos</option>
+                <option value="Parque Miranda">Parque Miranda</option>
+                <option value="Altamira">Altamira</option>
+                <option value="Chacao">Chacao</option>
+                <option value="Chacaito">Chacaito</option>
+                <option value="Sabana Grande">Sabana Grande</option>
+                <option value="Plaza Venezuela">Plaza Venezuela</option>
+
+              </select>
+              <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+               </div>
+            </div>
+          </div>
+    
+          <div class="col-span-2 rounded-md border border-gray-300 p-2">
+            <label for="direccion" class="block text-sm font-medium leading-6 text-gray-900">Direccion/Habitacion:</label>
+            <input type="text" id="direccion" class="input-field" required>
+          </div>
+        </div>
+    
+        <fieldset class="mt-6">
+          <legend class="text-sm font-semibold leading-6 text-gray-900 text-center">Metodo de Pago</legend>
+          <p class="mt-1 text-sm leading-6 text-gray-600">Seleccione su método de pago</p>
+          <div class="mt-3 space-y-3">
+            <div class="flex items-center gap-x-3">
+              <input id="pago-movil" name="metodo-pago" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+              <label for="pago-movil" class="block text-sm font-medium leading-6 text-gray-900">Pago móvil</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input id="divisa" name="metodo-pago" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+              <label for="divisa" class="block text-sm font-medium leading-6 text-gray-900">Divisa</label>
+            </div>
+          </div>
+        </fieldset>
+    
+        <div class="mt-6 flex items-center justify-end gap-x-6">
+          <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancelar</button>
+          <button type="submit" class="rounded-md colorbarra px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-950 focus:outline-none focus:ring focus:ring-blue-950">Enviar pedido</button>
+        </div>
+        <br>
+        <p class="colorbarra text-white" style="text-align: center;" >PRODUCTOS A PEDIR</p>
+        <div class="colorbarra text-white" id="carrito-entrega"></div>
+
+        
+
+      </form>
+    </div>
+    <div class="mt-4 mb-4">
+    <p class="font-bold tracking-tight text-gray-900 sm:text-2xl text-center">Muchas gracias por preferirnos!</p>
+  </div>
+  
+  <script src="index.js"></script>
+  <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script>
+      // example email
+      (function () {
+        emailjs.init("-HG_uDvKY8VPbYrLx");
+      })();
+    </script>
+</body>
+</html>
