@@ -1,4 +1,4 @@
-const url = 'https://chicharronera-servicio-l5g2.onrender.com/menu';
+const url = 'https://chicharroneraweb.onrender.com/menu';
 
 export const obtenerProductos = async()=>{
     //consultar el db.json y obtener el listado de productos que se encuentran alli

@@ -43,7 +43,7 @@ createUserForm.addEventListener("submit", async (event) => {
 
       // save in db
       axios
-        .post("https://chicharronera.onrender.com/newuser", newUser)
+        .post("https://chicharroneraweb.onrender.com/newuser", newUser)
         .then((info) => {
           if(info.status && info.status == 201){
             location.href = '../iniciarsesion/index.html'

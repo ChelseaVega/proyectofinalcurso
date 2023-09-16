@@ -14,7 +14,7 @@ const formEdit = document.querySelector("#formulario");
 document.addEventListener("DOMContentLoaded", async () => {
   //obtener todos los productos
   axios
-    .get(`https://chicharronera-servicio-l5g2.onrender.com/getproducts`)
+    .get(`https://chicharroneraweb.onrender.com/getproducts`)
     .then((response) => response.data)
     .then((data) => {
       selectProduct.innerHTML = `<option value="" disabled="" selected="">Seleccionar...</option>`;
@@ -63,14 +63,14 @@ selectProduct.addEventListener("change", function (e) {
 
   //obtener producto por id
   axios
-    .get(`https://chicharronera-servicio-l5g2.onrender.com/getproduct/${this.value}`)
+    .get(`https://chicharroneraweb.onrender.com/getproduct/${this.value}`)
     .then((response) => response.data)
     .then((data) => {
       nombreInput.value = data.nombre;
       precioInput.value = Number(data.precio);
       categoriaInput.value = Number(data.categoria);
       // imgInput2.value = `${data.imagenP}`;
-      imgEl.src = `https://chicharronera-servicio-l5g2.onrender.com/uploads/${data.imagenP}`;
+      imgEl.src = `https://chicharroneraweb.onrender.com/uploads/${data.imagenP}`;
       document
         .getElementById("edit-product")
         .setAttribute("action", `/upload2/${data._id}`);

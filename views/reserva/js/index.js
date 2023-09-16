@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Save in db
     axios
-    .post("https://chicharronera.onrender.com/newreservation", newReserva)
+    .post("https://chicharroneraweb.onrender.com/newreservation", newReserva)
       .then((response) => response.data)
       .then(async (data) => {
         // send email

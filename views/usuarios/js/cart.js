@@ -134,6 +134,6 @@ function finalizarCompra(e) {
     localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
 
     // Redirigir a la página de carrito
-    window.location.href = 'https://chicharronera.onrender.com/delivery/';
+    window.location.href = 'https://chicharroneraweb.onrender.com/delivery/';
 }
 });
