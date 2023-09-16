@@ -49,3 +49,16 @@ function buscarEnSitio(event) {
 		alert("No se encontró el término");
 	}
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+	var mySwiper = new Swiper('.swiper-container', {
+	  // Opciones personalizadas aquí
+	  slidesPerView: 3, // Cantidad de slides visibles a la vez (ajusta según tus preferencias)
+	  spaceBetween: 20, // Espacio entre slides (en píxeles)
+	  navigation: {
+		nextEl: '.swiper-button-next', // Selector del botón siguiente
+		prevEl: '.swiper-button-prev', // Selector del botón anterior
+	  },
+	});
+  });
+  
