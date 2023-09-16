@@ -8,6 +8,32 @@ const createEmailInput = document.querySelector("#create-Email-input");
 const createUsernameInput = document.querySelector("#create-username-input");
 const createPasswordInput = document.querySelector("#create-password-input");
 
+// Función para validar la contraseña
+function validatePassword(password) {
+  // Comprueba la longitud de la contraseña
+  if (password.length < 8 || password.length > 12) {
+    return false;
+  }
+
+  // Comprueba si contiene al menos una mayúscula
+  if (!/[A-Z]/.test(password)) {
+    return false;
+  }
+
+  // Comprueba si contiene al menos un carácter especial (puedes personalizar la lista de caracteres especiales)
+  if (!/[@#$%^&+=]/.test(password)) {
+    return false;
+  }
+
+  // Comprueba si contiene al menos un número
+  if (!/\d/.test(password)) {
+    return false;
+  }
+
+  return true;
+}
+
+
 // Agregar el event listener al formulario
 createUserForm.addEventListener("submit", async (event) => {
   event.preventDefault();
