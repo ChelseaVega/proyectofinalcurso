@@ -52,13 +52,18 @@ function buscarEnSitio(event) {
 
 document.addEventListener('DOMContentLoaded', function () {
 	var mySwiper = new Swiper('.swiper-container', {
-	  // Opciones personalizadas aquí
 	  slidesPerView: 3, // Cantidad de slides visibles a la vez (ajusta según tus preferencias)
 	  spaceBetween: 20, // Espacio entre slides (en píxeles)
 	  navigation: {
-		nextEl: '.swiper-button-next', // Selector del botón siguiente
-		prevEl: '.swiper-button-prev', // Selector del botón anterior
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
 	  },
+	  loop: true, // Activa el bucle infinito
+	});
+  
+	// Agregar evento al botón "Reproducir" (opcional)
+	document.querySelector('.play-button').addEventListener('click', function () {
+	  mySwiper.autoplay.start();
 	});
   });
   
